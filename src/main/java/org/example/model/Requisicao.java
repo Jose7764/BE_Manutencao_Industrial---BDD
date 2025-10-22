@@ -3,49 +3,37 @@ package org.example.model;
 import java.util.Date;
 
 public class Requisicao {
-
     private int id;
     private String setor;
-    private Date dataSolicitaçcao;
+    private Date dataSolicitacao;
+    private String status;
 
     public Requisicao() {
         this.id = 0;
-        this.setor = "";
-        this.dataSolicitaçcao = null;
+        this.setor = null;
+        this.dataSolicitacao = null;
+        this.status = null;
     }
 
-    public Requisicao( String setor, Date dataSolicitaçcao) {
+    public Requisicao(String setor, Date dataSolicitacao, String status) {
         this.setor = setor;
-        this.dataSolicitaçcao = dataSolicitaçcao;
+        this.dataSolicitacao = dataSolicitacao;
+        this.status = status;
     }
 
-    public Requisicao(int id, String setor, Date dataSolicitaçcao) {
+    public Requisicao(int id, String setor, Date dataSolicitacao, String status) {
         this.id = id;
         this.setor = setor;
-        this.dataSolicitaçcao = dataSolicitaçcao;
+        this.dataSolicitacao = dataSolicitacao;
+        this.status = status;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
-    }
-
-    public void setDataSolicitaçcao(Date dataSolicitaçcao) {
-        this.dataSolicitaçcao = dataSolicitaçcao;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getSetor() {
-        return setor;
-    }
-
-    public Date getDataSolicitaçcao() {
-        return dataSolicitaçcao;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public String getSetor() { return setor; }
+    public void setSetor(String setor) { this.setor = setor; }
+    public Date getDataSolicitacao() { return dataSolicitacao; }
+    public void setDataSolicitacao(Date dataSolicitacao) { this.dataSolicitacao = dataSolicitacao; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }
